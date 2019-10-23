@@ -1,0 +1,29 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/business.csv
+  parser:
+    type: csv
+    charset: UTF-8
+    newline: LF
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: business_id, type: string}
+    - {name: name, type: string}
+    - {name: city, type: string}
+    - {name: state, type: string}
+    - {name: latitude, type: double}
+    - {name: longitude, type: double}
+    - {name: stars, type: double}
+    - {name: review_count, type: long}
+    - {name: is_open, type: long}
+    - {name: categories, type: string}
+    - {name: h3, type: string}
+    - {name: rank, type: double}
+out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+  table: business, mode: replace}

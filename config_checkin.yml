@@ -1,0 +1,22 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/checkin.csv
+  parser:
+    type: csv
+    charset: UTF-8
+    newline: LF
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: business_id, type: string}
+    - {name: checkin, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
+    - {name: year, type: long}
+    - {name: month, type: long}
+    - {name: hour, type: long}
+out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+  table: checkin, mode: replace}

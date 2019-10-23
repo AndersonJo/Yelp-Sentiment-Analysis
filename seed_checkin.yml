@@ -1,0 +1,13 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/checkin.csv
+  parser:
+    type: csv
+out:
+  type: mysql
+  host: localhost
+  user: anderson
+  password: ""
+  database: yelp
+  table: checkin
+  mode: replace

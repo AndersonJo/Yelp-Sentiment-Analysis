@@ -1,0 +1,30 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/yelp_academic_dataset_user.json
+  parser:
+    type: json
+    columns:
+    - {name: user_id, type: string}
+    - {name: name, type: string}
+    - {name: review_count, type: double}
+    - {name: useful, type: double}
+    - {name: funny, type: double}
+    - {name: cool, type: double}
+    - {name: elite, type: string}
+    - {name: fans, type: double}
+    - {name: average_stars, type: double}
+    - {name: compliment_hot, type: double}
+    - {name: compliment_more, type: double}
+    - {name: compliment_profile, type: double}
+    - {name: compliment_cute, type: double}
+    - {name: compliment_list, type: double}
+    - {name: compliment_note, type: double}
+    - {name: compliment_plain, type: double}
+    - {name: compliment_cool, type: double}
+    - {name: compliment_funny, type: double}
+    - {name: compliment_writer, type: double}
+    - {name: compliment_photos, type: double}
+    charset: UTF-8
+    newline: LF
+out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+  table: user, mode: replace}

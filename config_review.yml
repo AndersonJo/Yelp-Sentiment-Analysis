@@ -1,0 +1,19 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/yelp_academic_dataset_review.json
+  parser:
+    type: json
+    columns:
+    - {name: review_id, type: string}
+    - {name: user_id, type: string}
+    - {name: business_id, type: string}
+    - {name: stars, type: double}
+    - {name: useful, type: double}
+    - {name: funny, type: double}
+    - {name: cool, type: double}
+    - {name: text, type: string}
+    - {name: date, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
+    charset: UTF-8
+    newline: LF
+out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+  table: review, mode: replace}
