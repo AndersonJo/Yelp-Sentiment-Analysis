@@ -24,7 +24,7 @@ in:
       - {name: compliment_funny, type: double}
       - {name: compliment_writer, type: double}
       - {name: compliment_photos, type: double}
-#      - {name: friends, type: string}
+#       - {name: friends, type: string}
 
 out:
   type: mysql

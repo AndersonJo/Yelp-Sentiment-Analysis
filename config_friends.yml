@@ -1,0 +1,19 @@
+in:
+  type: file
+  path_prefix: ./yelp-dataset/friends.csv
+  parser:
+    type: csv
+    charset: UTF-8
+    newline: CRLF
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 0
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: c0, type: string}
+    - {name: c1, type: string}
+out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+  table: friends, mode: replace}
