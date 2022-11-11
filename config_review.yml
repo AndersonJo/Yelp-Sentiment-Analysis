@@ -1,6 +1,6 @@
 in:
   type: file
-  path_prefix: ./yelp-dataset/yelp_academic_dataset_review.json
+  path_prefix: /tmp/yelp-dataset/yelp_academic_dataset_review.json
   parser:
     type: json
     columns:
@@ -15,5 +15,5 @@ in:
     - {name: date, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
     charset: UTF-8
     newline: LF
-out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+out: {type: mysql, host: localhost, user: anderson, password: '1234567890', database: yelp,
   table: review, mode: replace}

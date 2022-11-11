@@ -7,7 +7,7 @@ out:
   type: mysql
   host: localhost
   user: anderson
-  password: ""
+  password: "1234567890"
   database: yelp
   table: checkin
   mode: replace

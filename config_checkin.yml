@@ -18,5 +18,5 @@ in:
     - {name: year, type: long}
     - {name: month, type: long}
     - {name: hour, type: long}
-out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+out: {type: mysql, host: localhost, user: anderson, password: '1234567890', database: yelp,
   table: checkin, mode: replace}

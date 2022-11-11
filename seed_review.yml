@@ -1,6 +1,6 @@
 in:
   type: file
-  path_prefix: ./yelp-dataset/yelp_academic_dataset_review.json
+  path_prefix: /tmp/yelp-dataset/yelp_academic_dataset_review.json
   parser:
     type: json
     columns:
@@ -18,7 +18,7 @@ out:
   type: mysql
   host: localhost
   user: anderson
-  password: ""
+  password: "1234567890"
   database: yelp
   table: review
   mode: replace
