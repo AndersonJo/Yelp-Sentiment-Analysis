@@ -1,6 +1,6 @@
 in:
   type: file
-  path_prefix: ./yelp-dataset/business.csv
+  path_prefix: /tmp/yelp-dataset/business.csv
   parser:
     type: csv
     charset: UTF-8
