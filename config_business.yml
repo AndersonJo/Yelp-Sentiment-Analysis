@@ -25,5 +25,5 @@ in:
     - {name: categories, type: string}
     - {name: h3, type: string}
     - {name: rank, type: double}
-out: {type: mysql, host: localhost, user: anderson, password: '', database: yelp,
+out: {type: mysql, host: localhost, user: anderson, password: '1234567890', database: yelp,
   table: business, mode: replace}
