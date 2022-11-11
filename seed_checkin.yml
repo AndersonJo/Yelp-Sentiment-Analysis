@@ -3,7 +3,7 @@ in:
   path_prefix: /tmp/yelp-dataset/checkin.csv
   parser:
     type: csv
-    delimiter: '\t'
+    delimiter: '|'
 out:
   type: mysql
   host: localhost
